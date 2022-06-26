@@ -1,8 +1,6 @@
 package at.technikum.maintenancemonitor;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin
 @RestController
@@ -12,6 +10,13 @@ public class MaintenanceMonitorController {
     @GetMapping("/api/maintenanceMode")
     public String getMessage()
     {
+        return mm.getMessage();
+    }
+
+    @PostMapping("/api/maintenanceMode")
+    public String updateMessage(@RequestParam String message)
+    {
+        mm.setMessage(message);
         return mm.getMessage();
     }
 }

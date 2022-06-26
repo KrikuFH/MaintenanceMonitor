@@ -1,7 +1,5 @@
 package at.technikum.maintenancemonitor;
 
-import com.sun.tools.javac.Main;
-
 public class MaintenanceMonitor {
     private String message = "-";
 
