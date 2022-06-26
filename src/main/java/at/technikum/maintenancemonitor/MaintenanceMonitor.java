@@ -22,4 +22,9 @@ public class MaintenanceMonitor {
             this.message = message;
         }
     }
+
+    public void resetMessage()
+    {
+        this.message = "-";
+    }
 }

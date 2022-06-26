@@ -38,4 +38,20 @@ class MaintenanceMonitorControllerTest {
         // Assert
         assertEquals(expected,message);
     }
+    @Test
+    void MaintenanceMonitorController_UpdateMessage_Blank_Test()
+    {
+        // Arrange
+        String expected = "-";
+
+        MaintenanceMonitorController maintenanceMonitorController = new MaintenanceMonitorController();
+
+        // Act
+
+        maintenanceMonitorController.updateMessage("");
+        String message = maintenanceMonitorController.getMessage();
+
+        // Assert
+        assertEquals(expected,message);
+    }
 }
