@@ -14,7 +14,7 @@ public class MaintenanceMonitorController {
     }
 
     @PostMapping("/api/maintenanceMode")
-    public String updateMessage(@RequestParam String message)
+    public String updateMessage(@RequestParam(required = false, defaultValue = "") String message)
     {
         if(message.isEmpty() || message.isBlank())
         {
